@@ -1,0 +1,18 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo "Installing jq and awscli ..."
+      - apt update
+      - apt install jq
+      - pip install --upgrade awscli
+      - pip install boto3
+  pre_build:
+    commands:
+      - cd $CODEBUILD_SRC_DIR
+  build:
+    commands:
+      - python automation.py -environment $environment -appcomponent wms -updateGoldenImage ${updateGoldenImage} -topicarn ${topic_arn}
+  post_build:
+    commands:
+      - echo "Build completed on `date`"

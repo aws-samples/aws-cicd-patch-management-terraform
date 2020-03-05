@@ -1,0 +1,28 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect":"Allow",
+      "Action": [
+        "s3:*"
+      ],
+   "Resource": [
+        "${sdn_bucket}",
+        "${sdn_bucket}/*",
+        "${sdn_bucket_script}",
+        "${sdn_bucket_script}/*"
+
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "lambda:*",
+        "codebuild:BatchGetBuilds",
+        "codebuild:StartBuild",
+        "sns:Publish"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

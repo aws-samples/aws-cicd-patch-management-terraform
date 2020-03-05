@@ -1,0 +1,19 @@
+{
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Action": [
+            "s3:ListBucket",
+            "s3:GetBucketAcl",
+            "s3:GetBucketLocation",
+            "s3:GetObject",
+            "s3:GetObjectVersion"
+         ],
+         "Effect": "Allow",
+         "Resource": [
+        "${sdn_bucket}",
+        "${sdn_bucket}/*"
+         ]
+        }
+      ]
+}

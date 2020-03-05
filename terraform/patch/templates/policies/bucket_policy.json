@@ -1,0 +1,18 @@
+{
+  "Version": "2012-10-17",
+  "Id": "S3BucketPolicy",
+  "Statement": [
+    {
+      "Sid": "AllowRoleAccess",
+      "Effect": "allow",
+      "Principal": {
+        "AWS": [
+          "${iam_role}",
+          "${codebuild_role}"
+       ]
+      },
+      "Action": "s3:*",
+      "Resource": ["${sdn_bucket}/*", "${sdn_bucket}" ]
+    }
+  ]
+}
