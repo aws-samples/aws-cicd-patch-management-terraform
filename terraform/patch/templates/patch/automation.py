@@ -33,7 +33,7 @@ class patch:
             self.patchBucket = "sdn-prod-patch-bucket"
         else:
             self.patchBucket = "sdn-non-prod-patch-bucket"
-        self.ec2 = boto3.client('ec2', region_name='us-east-1')
+        self.ec2 = boto3.client('ec2')
         with open(self.filename) as json_file:
             data = json.load(json_file)
             self.patch = data['patch']
