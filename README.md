@@ -1,6 +1,6 @@
 ## Software Patch Using AWS Management Tools CI/CD and Terraform
 
-The sample code here supports the Software Patch Management Using AWS serverless CI/CD and Terraform blog post. 
+The sample code here supports the Software patching with AWS Systems Manager [blog post](https://aws.amazon.com/blogs/mt/software-patching-with-aws-systems-manager/). 
 See the post for instructions and a detailed walkthrough.
 
 ### Prerequisites
